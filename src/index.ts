@@ -93,6 +93,14 @@ export type Browser =
   | 'facebook'
   | 'instagram'
   | 'ios-webview'
+  | 'janestyle'
+  | 'live5ch'
+  | 'bathyscaphe'
+  | 'janestyle-ios'
+  | 'bb2c'
+  | 'janestyle-android'
+  | 'chmate'
+  | '2chgear'
   | 'curl'
   | 'searchbot';
 export type OperatingSystem =
@@ -168,6 +176,25 @@ const userAgentRules: UserAgentRule[] = [
   ['instagram', /Instagram\s([0-9\.]+)/],
   ['ios-webview', /AppleWebKit\/([0-9\.]+).*Mobile/],
   ['ios-webview', /AppleWebKit\/([0-9\.]+).*Gecko\)$/],
+  // 5ch Browsers (https://5ch.net/browsers.html)
+  // Windows
+  ['janestyle', /^Monazilla\/1\.00 JaneStyle\/([0-9\.]+)/],
+  ['live5ch', /^Monazilla\/1\.00 Live5ch\/([0-9\.]+)/],
+  // TODO: ホットゾヌ２
+  // TODO: Sanka
+  // macOS
+  ['bathyscaphe', /^Monazilla\/1\.00 BathyScaphe\/([0-9\.]+)/],
+  // TODO: V2C-R
+  // iOS
+  ['janestyle-ios', /^Monazilla\/1\.00 JaneStyle_iOS\/([0-9\.]+)/],
+  ['bb2c', /^Monazilla\/1\.00 \(BB2C\s([0-9\.]+)/],
+  // TODO: mae2c
+  // Android
+  ['janestyle-android', /^Monazilla\/1\.00 JaneStyle_Android\/([0-9\.]+)/],
+  ['chmate', /^Monazilla\/1\.00 2chMate\/([0-9\.]+)/],
+  ['2chgear', /^Monazilla\/1\.00 2chGear\/([0-9\.]+)/],
+  // TODO: En2ch
+  // TODO: Ciisaa
   ['curl', /^curl\/([0-9\.]+)$/],
   ['searchbot', SEARCHBOX_UA_REGEX],
 ];
