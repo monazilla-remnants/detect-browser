@@ -1,5 +1,5 @@
 {
-  "name": "detect-browser",
+  "name": "@monazilla-remnants/detect-browser",
   "version": "5.3.0",
   "description": "Unpack a browser type and version from the useragent string",
   "main": "index.js",
@@ -25,7 +25,7 @@
   "stability": "stable",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DamonOehlman/detect-browser.git"
+    "url": "https://github.com/monazilla-remnants/detect-browser.git"
   },
   "keywords": [
     "browser",
@@ -35,9 +35,9 @@
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DamonOehlman/detect-browser/issues"
+    "url": "https://github.com/monazilla-remnants/detect-browser/issues"
   },
-  "homepage": "https://github.com/DamonOehlman/detect-browser",
+  "homepage": "https://github.com/monazilla-remnants/detect-browser",
   "devDependencies": {
     "@types/node": "^13.9.1",
     "embellish-readme": "^1.7.2",
