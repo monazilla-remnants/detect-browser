@@ -162,9 +162,12 @@ const userAgentRules: UserAgentRule[] = [
   ['opera-mini', /Opera Mini.*Version\/([0-9\.]+)/],
   ['opera', /Opera\/([0-9\.]+)(?:\s|$)/],
   ['opera', /OPR\/([0-9\.]+)(:?\s|$)/],
-  ['pie',/^Microsoft Pocket Internet Explorer\/(\d+\.\d+)$/],
-  ['pie',/^Mozilla\/\d\.\d+\s\(compatible;\s(?:MSP?IE|MSInternet Explorer) (\d+\.\d+);.*Windows CE.*\)$/],
-  ['netfront',/^Mozilla\/\d\.\d+.*NetFront\/(\d.\d)/],
+  ['pie', /^Microsoft Pocket Internet Explorer\/(\d+\.\d+)$/],
+  [
+    'pie',
+    /^Mozilla\/\d\.\d+\s\(compatible;\s(?:MSP?IE|MSInternet Explorer) (\d+\.\d+);.*Windows CE.*\)$/,
+  ],
+  ['netfront', /^Mozilla\/\d\.\d+.*NetFront\/(\d.\d)/],
   ['ie', /Trident\/7\.0.*rv\:([0-9\.]+).*\).*Gecko$/],
   ['ie', /MSIE\s([0-9\.]+);.*Trident\/[4-7].0/],
   ['ie', /MSIE\s(7\.0)/],
@@ -295,7 +298,13 @@ export function parseUserAgent(
     return new BotInfo();
   }
   // Do not use RegExp for split operation as some browser do not support it (See: http://blog.stevenlevithan.com/archives/cross-browser-split)
-  let versionParts = match[1] && match[1].split('.').join('_').split('_').slice(0, 3);
+  let versionParts =
+    match[1] &&
+    match[1]
+      .split('.')
+      .join('_')
+      .split('_')
+      .slice(0, 3);
   if (versionParts) {
     if (versionParts.length < REQUIRED_VERSION_PARTS) {
       versionParts = [
