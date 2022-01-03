@@ -5,6 +5,58 @@ function assertAgentString(t, agentString, expectedResult) {
   t.deepEqual(parseUserAgent(agentString), expectedResult);
 }
 
+test('5ch browsers', function(t) {
+  assertAgentString(
+    t,
+    'Monazilla/1.00 JaneStyle_iOS/1.6.2.3 iOS13.3.1 iPhone12,3',
+    { type: 'browser', name: 'janestyle-ios', version: '1.6.2', os: 'iOS' },
+  );
+
+  assertAgentString(
+    t,
+    'Monazilla/1.00 (BB2C 1.3.92; iOS 13.4.1 iPhone12,3)',
+    { type: 'browser', name: 'bb2c', version: '1.3.92', os: 'iOS' },
+  );
+
+  assertAgentString(
+    t,
+    'Monazilla/1.00 JaneStyle_Android/1.7.3 Dalvik/2.1.0 (Linux; U; Android 7.1.2; MO-01K Build/N2G47H)',
+    { type: 'browser', name: 'janestyle-android', version: '1.7.3', os: 'Android OS' },
+  );
+
+  assertAgentString(
+    t,
+    'Monazilla/1.00 2chMate/0.8.10.64 Dalvik/2.1.0 (Linux; U; Android 9; SC-03J Build/PPR1.180610.011)',
+    { type: 'browser', name: 'chmate', version: '0.8.10', os: 'Android OS' },
+  );
+
+  assertAgentString(
+    t,
+    'Monazilla/1.00 2chGear/1.0.2.1 Dalvik/2.1.0 (Linux; U; Android 10; J9210 Build/55.1.A.3.149)',
+    { type: 'browser', name: '2chgear', version: '1.0.2', os: 'Android OS' },
+  );
+
+  assertAgentString(
+    t,
+    'Monazilla/1.00 JaneStyle/4.00 Windows/6.3.9600',
+    { type: 'browser', name: 'janestyle', version: '4.00.0', os: 'Windows' },
+  );
+
+  assertAgentString(
+    t,
+    'Monazilla/1.00 Live5ch/1.52 Windows/10.0.17134',
+    { type: 'browser', name: 'live5ch', version: '1.52.0', os: 'Windows' },
+  );
+
+  assertAgentString(
+    t,
+    'Monazilla/1.00 BathyScaphe/1089 Mac OS X/10.15.4',
+    { type: 'browser', name: 'bathyscaphe', version: '1089.0.0', os: 'Mac OS' },
+  );
+
+  t.end();
+});
+
 test('detects Chrome', function(t) {
   assertAgentString(
     t,
