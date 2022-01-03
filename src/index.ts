@@ -140,6 +140,25 @@ const SEARCHBOT_OS_REGEX = /(nuhk|curl|Googlebot|Yammybot|Openbot|Slurp|MSNBot|A
 const REQUIRED_VERSION_PARTS = 3;
 
 const userAgentRules: UserAgentRule[] = [
+  // 5ch Browsers (https://5ch.net/browsers.html)
+  // iOS
+  ['janestyle-ios', /^Monazilla\/1\.00 JaneStyle_iOS\/([0-9\.]+)/],
+  ['bb2c', /^Monazilla\/1\.00 \(BB2C\s([0-9\.]+)/],
+  // TODO: mae2c
+  // Android
+  ['janestyle-android', /^Monazilla\/1\.00 JaneStyle_Android\/([0-9\.]+)/],
+  ['chmate', /^Monazilla\/1\.00 2chMate\/([0-9\.]+)/],
+  ['2chgear', /^Monazilla\/1\.00 2chGear\/([0-9\.]+)/],
+  // TODO: En2ch
+  // TODO: Ciisaa
+  // Windows
+  ['janestyle', /^Monazilla\/1\.00 JaneStyle\/([0-9\.]+)/],
+  ['live5ch', /^Monazilla\/1\.00 Live5ch\/([0-9\.]+)/],
+  // TODO: ホットゾヌ２
+  // TODO: Sanka
+  // macOS
+  ['bathyscaphe', /^Monazilla\/1\.00 BathyScaphe\/([0-9\.]+)/],
+  // TODO: V2C-R
   ['aol', /AOLShield\/([0-9\._]+)/],
   ['edge', /Edge\/([0-9\._]+)/],
   ['edge-ios', /EdgiOS\/([0-9\._]+)/],
