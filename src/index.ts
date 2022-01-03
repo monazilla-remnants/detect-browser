@@ -198,25 +198,6 @@ const userAgentRules: UserAgentRule[] = [
   ['instagram', /Instagram\s([0-9\.]+)/],
   ['ios-webview', /AppleWebKit\/([0-9\.]+).*Mobile/],
   ['ios-webview', /AppleWebKit\/([0-9\.]+).*Gecko\)$/],
-  // 5ch Browsers (https://5ch.net/browsers.html)
-  // Windows
-  ['janestyle', /^Monazilla\/1\.00 JaneStyle\/([0-9\.]+)/],
-  ['live5ch', /^Monazilla\/1\.00 Live5ch\/([0-9\.]+)/],
-  // TODO: ホットゾヌ２
-  // TODO: Sanka
-  // macOS
-  ['bathyscaphe', /^Monazilla\/1\.00 BathyScaphe\/([0-9\.]+)/],
-  // TODO: V2C-R
-  // iOS
-  ['janestyle-ios', /^Monazilla\/1\.00 JaneStyle_iOS\/([0-9\.]+)/],
-  ['bb2c', /^Monazilla\/1\.00 \(BB2C\s([0-9\.]+)/],
-  // TODO: mae2c
-  // Android
-  ['janestyle-android', /^Monazilla\/1\.00 JaneStyle_Android\/([0-9\.]+)/],
-  ['chmate', /^Monazilla\/1\.00 2chMate\/([0-9\.]+)/],
-  ['2chgear', /^Monazilla\/1\.00 2chGear\/([0-9\.]+)/],
-  // TODO: En2ch
-  // TODO: Ciisaa
   ['curl', /^curl\/([0-9\.]+)$/],
   ['searchbot', SEARCHBOX_UA_REGEX],
 ];
@@ -229,21 +210,21 @@ const operatingSystemRules: OperatingSystemRule[] = [
   ['Windows 3.11', /Win16/],
   ['Windows 95', /(Windows 95)|(Win95)|(Windows_95)/],
   ['Windows 98', /(Windows 98)|(Win98)/],
-  ['Windows 2000', /(Windows NT 5.0)|(Windows 2000)/],
-  ['Windows XP', /(Windows NT 5.1)|(Windows XP)/],
-  ['Windows Server 2003', /(Windows NT 5.2)/],
-  ['Windows Vista', /(Windows NT 6.0)/],
-  ['Windows 7', /(Windows NT 6.1)/],
-  ['Windows 8', /(Windows NT 6.2)/],
-  ['Windows 8.1', /(Windows NT 6.3)/],
-  ['Windows 10', /(Windows NT 10.0)/],
+  ['Windows 2000', /(Windows NT 5.0)|(Windows\/5.0)|(Windows 2000)/],
+  ['Windows XP', /(Windows NT 5.1)|(Windows\/5.1)|(Windows XP)/],
+  ['Windows Server 2003', /(Windows NT 5.2)|(Windows\/5.2)/],
+  ['Windows Vista', /(Windows NT 6.0)|(Windows\/6.0)/],
+  ['Windows 7', /(Windows NT 6.1)|(Windows\/6.1)/],
+  ['Windows 8', /(Windows NT 6.2)|(Windows\/6.2)/],
+  ['Windows 8.1', /(Windows NT 6.3)|(Windows\/6.3)/],
+  ['Windows 10', /(Windows NT 10.0)|(Windows\/10.0)/],
   ['Windows ME', /Windows ME/],
   ['Windows CE', /Windows CE|WinCE|Microsoft Pocket Internet Explorer/],
   ['Open BSD', /OpenBSD/],
   ['Sun OS', /SunOS/],
   ['Chrome OS', /CrOS/],
   ['Linux', /(Linux)|(X11)/],
-  ['Mac OS', /(Mac_PowerPC)|(Macintosh)/],
+  ['Mac OS', /(Mac_PowerPC)|(Macintosh)|(Mac OS X)/],
   ['QNX', /QNX/],
   ['BeOS', /BeOS/],
   ['OS/2', /OS\/2/],

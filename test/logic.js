@@ -39,13 +39,13 @@ test('5ch browsers', function(t) {
   assertAgentString(
     t,
     'Monazilla/1.00 JaneStyle/4.00 Windows/6.3.9600',
-    { type: 'browser', name: 'janestyle', version: '4.00.0', os: 'Windows' },
+    { type: 'browser', name: 'janestyle', version: '4.00.0', os: 'Windows 8.1' },
   );
 
   assertAgentString(
     t,
     'Monazilla/1.00 Live5ch/1.52 Windows/10.0.17134',
-    { type: 'browser', name: 'live5ch', version: '1.52.0', os: 'Windows' },
+    { type: 'browser', name: 'live5ch', version: '1.52.0', os: 'Windows 10' },
   );
 
   assertAgentString(
