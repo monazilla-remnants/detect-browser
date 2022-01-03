@@ -144,6 +144,7 @@ const userAgentRules: UserAgentRule[] = [
   // iOS
   ['janestyle-ios', /^Monazilla\/1\.00 JaneStyle_iOS\/([0-9\.]+)/],
   ['bb2c', /^Monazilla\/1\.00 \(BB2C\s([0-9\.]+)/],
+  ['bb2c', /^Mozilla\/5\.0\s\(Windows\sNT\s10.0;\sWOW64\)\sAppleWebKit\/537\.36\s\(KHTML,\slike\sGecko\)\sChrome\/54\.0\.2840\.71\sSafari\/537\.36$/],
   // TODO: mae2c
   // Android
   ['janestyle-android', /^Monazilla\/1\.00 JaneStyle_Android\/([0-9\.]+)/],
@@ -203,6 +204,7 @@ const userAgentRules: UserAgentRule[] = [
 ];
 const operatingSystemRules: OperatingSystemRule[] = [
   ['iOS', /iP(hone|od|ad)/],
+  ['iOS', /^Mozilla\/5\.0\s\(Windows\sNT\s10.0;\sWOW64\)\sAppleWebKit\/537\.36\s\(KHTML,\slike\sGecko\)\sChrome\/54\.0\.2840\.71\sSafari\/537\.36$/],
   ['Android OS', /Android/],
   ['BlackBerry OS', /BlackBerry|BB10/],
   ['Windows Mobile', /IEMobile/],

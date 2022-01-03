@@ -20,6 +20,12 @@ test('5ch browsers', function(t) {
 
   assertAgentString(
     t,
+    'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36',
+    { type: 'browser', name: 'bb2c', version: '', os: 'iOS' },
+  );
+
+  assertAgentString(
+    t,
     'Monazilla/1.00 JaneStyle_Android/1.7.3 Dalvik/2.1.0 (Linux; U; Android 7.1.2; MO-01K Build/N2G47H)',
     { type: 'browser', name: 'janestyle-android', version: '1.7.3', os: 'Android OS' },
   );
